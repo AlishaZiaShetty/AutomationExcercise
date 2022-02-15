@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.automationexercise.Base;
+import com.qa.pages.EarlyRedemptionPage;
 import com.qa.pages.LandingPage;
 import com.qa.pages.LoginPage;
 import com.qa.pages.RedemptionPage;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 public class RedemptionHomePageTestCases extends Base
 {
 	RedemptionPage redemptionPage = new RedemptionPage(driver);
+	EarlyRedemptionPage earlyredemp= new EarlyRedemptionPage(driver);
 	String[] expectedHeaderArray=new String[] {"Issuer name","issuer Country", "Paying Agent", "Lead Admin Location", "NominalValue"};
 	List<String> expectedHeaderList ;
 	
@@ -41,8 +43,6 @@ public class RedemptionHomePageTestCases extends Base
 		loginPage.getPassword().sendKeys(password);
 		loginPage.getLoginBtn().click();
 	}
-	
-
 
 	public void verifyTitle()
 	{
@@ -126,5 +126,28 @@ public class RedemptionHomePageTestCases extends Base
 		}
 		Assert.assertTrue(status , "Share is not present");
 		
+		System.out.println("===============================================");
+	}
+	
+	@Test
+	public void verifyPopulationLogic()
+	{
+	
+		// Get the nominal amount & convert into int for comparison later
+		WebElement nominalAmt = redemptionPage.getNominalAmt();
+		int nominalValue = Integer.parseInt(nominalAmt.getText());
+		
+		System.out.println("===============================================");
+		//Click on the early redemption screen
+		redemptionPage.getBtnForCash().click();
+		
+		System.out.println("===============================================");
+		//Verify the title of next screen name
+		Assert.assertEquals(redemptionPage.getTitle(), "Early Redemption");
+		
+		System.out.println("===============================================");
+		//get the auto populated value for nominal & compare using assert with the value from the first screen
+		
+		//Verify if the radio button for Cash isEnabled
 	}
 }

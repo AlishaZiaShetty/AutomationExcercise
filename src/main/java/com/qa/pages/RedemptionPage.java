@@ -32,7 +32,10 @@ public class RedemptionPage
 	By allMode = By.xpath("//table[@id ='Redemptions']//tr//td[10]");
 	
 	//RedemptionButton for Mode - Cash
-	By btnCash = By.xpath("//td[text() ='Cash']//following::");
+	By btnForCash = By.xpath("//td[text() ='Cash']//following-sibling::td[1]/button");
+	
+	//NominalValue - Cash
+	By nominalValue = By.xpath("//td[text() ='Cash']//preceding-sibling::td[3]");
 	
 	public WebElement getTitle()
 	{
@@ -62,5 +65,17 @@ public class RedemptionPage
 	{
 		List<WebElement> modes = driver.findElements(allMode);
 		return modes;
+	}
+	
+	public WebElement getBtnForCash()
+	{
+		WebElement button = driver.findElement(btnForCash);
+		return button;
+	}
+
+	public WebElement getNominalAmt() 
+	{
+		return driver.findElement(nominalValue);
+	
 	}
 }
