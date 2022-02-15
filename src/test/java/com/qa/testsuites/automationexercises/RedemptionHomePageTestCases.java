@@ -44,11 +44,13 @@ public class RedemptionHomePageTestCases extends Base
 		loginPage.getLoginBtn().click();
 	}
 
+	@Test
 	public void verifyTitle()
 	{
 		Assert.assertEquals(redemptionPage.getTitle(), "Redemption Screen");
 	}
 	
+	@Test
 	public void verifyTable()
 	{
 		//Get the list of webelement with all the headers
