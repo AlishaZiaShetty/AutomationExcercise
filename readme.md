@@ -1,3 +1,7 @@
+Selenium - TestNG project will be used to automate web application. Project has Page Object model as its design pattern.
+
+Pre-requisites:
+
 Java8 or higher should be installed.
 Set JAVA_HOME
 Install maven and set MAVEN_HOME
