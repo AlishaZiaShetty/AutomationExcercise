@@ -11,6 +11,8 @@ Install TestNg plugin from marketplace
 Framework structure:
 Project is a maven project.
 
+src/main/java	   --> Base.java  --> Has the driver & properties details
+
 src/main/java      --> com.qa.pages --> Has the page objects
 
 LandingPage        --> Has the objects for the landing page of the web portal
@@ -23,7 +25,7 @@ EarlyRedemption    --> Has the objects for the EarlyRedemption screen of the web
 
 src/main/java      --> com.qa.resources --> Has the config properties
 
-src/test/java      --> com.qa.testsuites.automationexcercises --> Has the tests
+src/test/java      --> com.qa.testsuites.automationexcercises --> Has the tests for UI validation & PDF validation
 
 
 Some of the issues Faced:
