@@ -35,8 +35,5 @@ public class PDFReader
 		
 		Assert.assertTrue(pdfContent.contains("Dan"), "The file contains Dan");
 		
-		
 	}
-	
-
 } 

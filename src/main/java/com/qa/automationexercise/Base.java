@@ -33,6 +33,16 @@ public class Base
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\91953\\Downloads\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
+		
+		if(browserName.equals("firefox"))
+		{
+			
+		}
+		
+		if(browserName.equals("ie"))
+		{
+			
+		}
 			
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		//add property , pick from config

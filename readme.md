@@ -1,3 +1,6 @@
+SC1 - Unit Testcases
+SC5 - PDF validation
+
 Selenium - TestNG project will be used to automate web application. Project has Page Object model as its design pattern.
 
 Pre-requisites:
@@ -9,9 +12,10 @@ Add JAVA_HOME and MAVEN_HOME in your Path variable
 Install TestNg plugin from marketplace
 
 Framework structure:
+
 Project is a maven project.
 
-src/main/java	   --> Base.java  --> Has the driver & properties details
+src/main/java	   --> Base.java  --> Base of the framework (Has browser & property invocation) , needs to be referred by all the testcases
 
 src/main/java      --> com.qa.pages --> Has the page objects
 
