@@ -3,6 +3,7 @@ package com.qa.testsuites.automationexercises;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -133,11 +134,15 @@ public class RedemptionHomePageTestCases extends Base
 	}
 	
 	@Test
-	public void earlyRedemptionScreenSwitch()
+	public void getWindowshandleForChildPage()
 	{
 		redemptionPage.getBtnForCash();
 		Set<String> windows	= driver.getWindowHandles();
-		driver.switchTo(arg)
+		Iterator<String> it = windows.iterator();
+		String parentId = it.next();
+		String childId = it.next();
+		
+		driver.switchTo().window(childId);
 	}
 	
 	@Test
