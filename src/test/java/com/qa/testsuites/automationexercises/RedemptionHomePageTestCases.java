@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -129,6 +130,14 @@ public class RedemptionHomePageTestCases extends Base
 		Assert.assertTrue(status , "Share is not present");
 		
 		System.out.println("===============================================");
+	}
+	
+	@Test
+	public void earlyRedemptionScreenSwitch()
+	{
+		redemptionPage.getBtnForCash();
+		Set<String> windows	= driver.getWindowHandles();
+		driver.switchTo(arg)
 	}
 	
 	@Test
