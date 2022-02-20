@@ -134,6 +134,20 @@ public class RedemptionHomePageTestCases extends Base
 	}
 	
 	@Test
+	public void getNominalValueForCash()
+	{
+		WebElement nominalAmt = redemptionPage.getNominalAmt();
+		int nominalValue = Integer.parseInt(nominalAmt.getText());
+	}
+	
+	@Test
+	public void clickEarlyRedemptionForCash()
+	{
+		redemptionPage.getBtnForCash().click();
+		Assert.assertEquals(redemptionPage.getTitle(), "Early Redemption");
+	}
+	
+	@Test
 	public void getWindowshandleForChildPage()
 	{
 		redemptionPage.getBtnForCash();
@@ -149,17 +163,8 @@ public class RedemptionHomePageTestCases extends Base
 	public void verifyPopulationLogic()
 	{
 	
-		// Get the nominal amount & convert into int for comparison later
-		WebElement nominalAmt = redemptionPage.getNominalAmt();
-		int nominalValue = Integer.parseInt(nominalAmt.getText());
 		
-		System.out.println("===============================================");
-		//Click on the early redemption screen
-		redemptionPage.getBtnForCash().click();
 		
-		System.out.println("===============================================");
-		//Verify the title of next screen name
-		Assert.assertEquals(redemptionPage.getTitle(), "Early Redemption");
 		
 		System.out.println("===============================================");
 		//get the auto populated value for nominal & compare using assert with the value from the first screen
