@@ -49,7 +49,7 @@ public class RedemptionHomePageTestCases extends Base
 	@Test
 	public void verifyTitle()
 	{
-		Assert.assertEquals(redemptionPage.getTitle(), "Redemption Screen");
+		Assert.assertEquals(redemptionPage.getTitle(), "Redemption");
 	}
 	
 	@Test
@@ -165,10 +165,6 @@ public class RedemptionHomePageTestCases extends Base
 	
 		
 		
-		
-		System.out.println("===============================================");
-		//get the auto populated value for nominal & compare using assert with the value from the first screen
-		
-		//Verify if the radio button for Cash isEnabled
+	
 	}
 }

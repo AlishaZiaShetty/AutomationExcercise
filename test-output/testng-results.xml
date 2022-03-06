@@ -2,25 +2,22 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="228" started-at="2022-02-18T20:44:56 IST" finished-at="2022-02-18T20:44:56 IST">
+  <suite name="Default suite" duration-ms="2328" started-at="2022-02-22T13:38:59 IST" finished-at="2022-02-22T13:39:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="228" started-at="2022-02-18T20:44:56 IST" finished-at="2022-02-18T20:44:56 IST">
+    <test name="Default test" duration-ms="2328" started-at="2022-02-22T13:38:59 IST" finished-at="2022-02-22T13:39:01 IST">
       <class name="com.qa.testsuites.automationexercises.PDFReader">
-        <test-method status="FAIL" signature="readPDFTest()[pri:0, instance:com.qa.testsuites.automationexercises.PDFReader@5fbe4146]" name="readPDFTest" duration-ms="153" started-at="2022-02-18T20:44:56 IST" finished-at="2022-02-18T20:44:56 IST">
-          <exception class="java.io.IOException">
+        <test-method status="FAIL" signature="readPDFTest()[pri:0, instance:com.qa.testsuites.automationexercises.PDFReader@7ce6a65d]" name="readPDFTest" duration-ms="2298" started-at="2022-02-22T13:38:59 IST" finished-at="2022-02-22T13:39:01 IST">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Error: End-of-File, expected line]]>
+              <![CDATA[The file containsAlisha expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.io.IOException: Error: End-of-File, expected line
-at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1093)
-at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2580)
-at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2551)
-at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:219)
-at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1228)
-at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1128)
-at com.qa.testsuites.automationexercises.PDFReader.readPDFTest(PDFReader.java:30)
+              <![CDATA[java.lang.AssertionError: The file containsAlisha expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at com.qa.testsuites.automationexercises.PDFReader.readPDFTest(PDFReader.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,7 +48,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readPDFTest -->

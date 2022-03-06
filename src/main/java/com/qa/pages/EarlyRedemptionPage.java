@@ -15,12 +15,21 @@ public class EarlyRedemptionPage
 	
 	By title= By.xpath("//*[text()='Early Redemption']");
 	
+	By prefilledNominal= By.xpath("//*[text()='Early Redemption']");
+	
+	By prefilledMode = By.xpath("//input[type ='Early Redemption']");
+	
 	
 	public WebElement getTitle2()
 	{
 		return driver.findElement(title);
-	}
-
-
+	}	
 	
+	
+	public WebElement getNominalPrefilled()
+	{
+		return driver.findElement(prefilledNominal);
+	}
+	
+	public WebElement getRadioButton(prefilledMode);
 }

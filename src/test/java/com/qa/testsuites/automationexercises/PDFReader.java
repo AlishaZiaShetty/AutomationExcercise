@@ -20,7 +20,7 @@ public class PDFReader
 	@Test
 	public void readPDFTest() throws IOException
 	{	
-		URL url = new URL("file:///C://Users//91953//eclipse-workspace//E2EProject//src//main//java//com//qa//resources");
+		URL url = new URL("file:///C://Users//91953//eclipse-workspace//E2EProject//src//main//java//com//qa//resources//gcp.pdf");
 				InputStream  is = url.openStream();
 		
 		BufferedInputStream fileParse = new BufferedInputStream(is);
@@ -33,7 +33,8 @@ public class PDFReader
 		
 		System.out.println("pdfContent: "+pdfContent);
 		
-		Assert.assertTrue(pdfContent.contains("Dan"), "The file contains Dan");
+		String expectedValue = "Alisha";
+		Assert.assertTrue(pdfContent.contains("Alisha"), "The file contains"+expectedValue);
 		
 	}
 } 
